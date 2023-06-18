@@ -16,16 +16,16 @@ pipeline {
                 sh '/opt/apache-maven/bin/mvn clean package'
             }
         }
-        stage ('test') {
-            steps {
-                echo 'test is succeed'
-            }
-        }
         // stage ('test') {
         //     steps {
-        //         sh '/opt/apache-maven/bin/mvn sonar:sonar -Dsonar.projectKey=student-app -Dsonar.host.url=http://3.101.80.224:9000 -Dsonar.login=a3cc1415671986cd696512f8b285bf5949018ee5'
+        //         echo 'test is succeed'
         //     }
         // }
+        stage ('test') {
+            steps {
+                sh '/opt/apache-maven/bin/mvn sonar:sonar -Dsonar.projectKey=student-app -Dsonar.host.url=http://184.72.9.129:9000 -Dsonar.login=d4df7784bf48c5cf6fb29538a909f16eb3f0e8d2'
+            }
+        }
         // stage ('build-test') {
         //     steps {
         //         withSonarQubeEnv(installationName:'sonar-server',credentialsId: 'sonar-token') { 
