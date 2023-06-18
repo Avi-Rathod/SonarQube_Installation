@@ -6,16 +6,16 @@ pipeline {
                 git 'https://github.com/shubhamkalsait/studentapp-ui.git'
             }
         }
-        stage ('build') {
-            steps {
-                echo 'build is succeed'
-            }
-        }
         // stage ('build') {
         //     steps {
-        //         sh '/opt/apache-maven/bin/mvn clean package'
+        //         echo 'build is succeed'
         //     }
         // }
+        stage ('build') {
+            steps {
+                sh '/opt/apache-maven/bin/mvn clean package'
+            }
+        }
         stage ('test') {
             steps {
                 echo 'test is succeed'
