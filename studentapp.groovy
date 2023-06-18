@@ -23,7 +23,7 @@ pipeline {
         }
         // stage ('test') {
         //     steps {
-        //         sh '/opt/apache-maven/bin/mvn sonar:sonar -Dsonar.projectKey=student-app -Dsonar.host.url=http://3.21.106.59:9000 -Dsonar.4ca9753beca7cd15cc83194ec1e4f71c039cf661'
+        //         sh '/opt/apache-maven/bin/mvn sonar:sonar -Dsonar.projectKey=student-app -Dsonar.host.url=http://18.191.140.71:9000 -Dsonar.login=14452028edda616eb19f53e0592232f70f8eacd2'
         //     }
         // }
         // stage ('build-test') {
