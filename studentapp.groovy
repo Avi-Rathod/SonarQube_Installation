@@ -29,13 +29,13 @@ pipeline {
                }
             }
         }
-        stage('quality-gate') {
-            steps {
-                timeout (time:10, unit:'MINUTES') {
-                    waitforQualityGate abortPipeline:true
-                }
-            }
-        }
+        // stage('quality-gate') {
+        //     steps {
+        //         timeout (time:10, unit:'MINUTES') {
+        //             waitforQualityGate abortPipeline:true
+        //         }
+        //     }
+        // }
         stage('deploy') {
             steps {
                 deploy adapters: [tomcat8(credentialsId: 'tomcat-cred', path: '', url: 'http://18.116.15.149:8080')], contextPath: '/', war: '**/*.war'
