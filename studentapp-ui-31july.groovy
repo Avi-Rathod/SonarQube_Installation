@@ -3,7 +3,7 @@ Pipeline {
     stages {
         stage ('Pull') {
             steps {
-                git branch: 'main', url: 'https://github.com/shubhamkalsait/studentapp-ui.git'
+                git 'https://github.com/shubhamkalsait/studentapp-ui.git'
             }
         }
         stage ('Build') {
