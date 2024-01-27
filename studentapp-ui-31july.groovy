@@ -3,7 +3,7 @@ Pipeline {
     stages {
         stage ('Pull') {
             steps {
-                git 'https://github.com/smitkotkar/jenkins_practice.git'
+                git 'https://github.com/smitkotkar/jenkins_practice'
             }
         }
         stage ('Build') {
